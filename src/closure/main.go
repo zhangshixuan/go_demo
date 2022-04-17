@@ -8,6 +8,7 @@ func main() {
 	upper := AddUpper()
 	fmt.Println(upper(1))
 	fmt.Println(upper(2))
+
 }
 
 // 累加器
