@@ -10,16 +10,17 @@ type Usb interface {
 
 //定义一个相机结构体
 type Camera struct {
+	Name string
 }
 
 //让相机结构体方法，实现usb接口的开始方法
 func (c Camera) Start() {
-	fmt.Println("相机开始工作")
+	fmt.Printf("%v相机开始工作\n", c.Name)
 }
 
 //让相机结构体方法，实现usb接口的结束方法
 func (c Camera) Stop() {
-	fmt.Println("相机结束工作")
+	fmt.Printf("%v相机结束工作\n", c.Name)
 }
 
 type Phone struct {
@@ -48,7 +49,9 @@ func (c Computer) Working(usb Usb) {
 接口
 */
 func main() {
-	camera := Camera{}
+	camera := Camera{
+		Name: "三星手机",
+	}
 	phone := Phone{}
 	computer := Computer{}
 	computer.Working(camera)
