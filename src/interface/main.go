@@ -50,7 +50,7 @@ func (c Computer) Working(usb Usb) {
 */
 func main() {
 	camera := Camera{
-		Name: "三星手机",
+		Name: "佳能相机",
 	}
 	phone := Phone{}
 	computer := Computer{}
