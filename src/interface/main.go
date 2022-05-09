@@ -34,6 +34,10 @@ func (p Phone) Stop() {
 	fmt.Println("手机结束工作")
 }
 
+func (p Phone) Call() {
+	fmt.Println("手机打电话")
+}
+
 // 计算机结构体
 type Computer struct {
 }
@@ -42,6 +46,10 @@ type Computer struct {
 //只要是实现了Usb接口（所谓实现Usb接口，就是指实现了Usb接口声明所有方法）
 func (c Computer) Working(usb Usb) {
 	usb.Start()
+	// 类型断言实践
+	if phone, ok := usb.(Phone); ok {
+		phone.Call()
+	}
 	usb.Stop()
 }
 
