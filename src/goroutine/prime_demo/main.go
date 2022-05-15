@@ -47,6 +47,10 @@ func IsPrime(n int) bool {
 	return true
 }
 
+/**
+参考图示：
+图示少画了匿名函数的协程
+*/
 func main() {
 	intChan := make(chan int, 1000)   //所有数管道
 	primeChan := make(chan int, 2000) //素数管道
